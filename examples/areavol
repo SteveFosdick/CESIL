@@ -1,0 +1,169 @@
+10 CLS
+20 PRINT "*******************************************"
+30 LINE
+40 PRINT "*                                         *"
+50 LINE
+60 PRINT "*          AREAS AND VOLUMES              *"
+70 LINE
+80 PRINT "*                                         *"
+90 LINE
+100 PRINT "* RAINBOW COMPUTER PRODUCTS LIMITED 1986 *"
+110 LINE
+120 PRINT "*                                        *"
+130 LINE
+260 PRINT "******************************************"
+270 LINE
+280 LINE
+290 PRINT "PRESS ANY KEY TO CONTINUE"
+300 GETCHR
+310menu CLS
+320 PRINT "Please choose from:"
+330 LINE
+340 LINE
+350 PRINT "      1. Areas."
+360 LINE
+370 LINE
+380 PRINT "      2. Volumes."
+390 LINE
+400 LINE
+410 PRINT "      3. Surface area."
+420 LINE
+430 LINE
+440 PRINT "      4. Exit from the program."
+450 LINE
+460 LINE
+470 PRINT "Your choice ? "
+480filoop GETCHR
+490 COMPARE 49
+500 JIZ fchoice
+510 COMPARE 50
+520 JIZ schoice
+530 COMPARE 51
+540 JIZ tchoice
+550 COMPARE 52
+560 JIZ finish
+570 JUMP filoop
+580fchoice VDU
+590 LINE
+600 LINE
+610 PRINT "Do you want:"
+620 LINE
+630 LINE
+640 PRINT "      1. Cubes."
+650 LINE
+660 LINE
+670 PRINT "      2. Recatngles."
+680 LINE
+690 LINE
+700 PRINT "      3. Triangles."
+710 LINE
+720 LINE
+730 PRINT "Your choice please ? "
+740seloop GETCHR
+750 COMPARE 49
+760 JIZ cub
+770 COMPARE 50
+780 JIZ rec
+790 COMPARE 51
+800 JIZ tri
+810 JUMP seloop
+820tri VDU
+830 LINE
+840 LINE
+850 PRINT "Please enter the base."
+860 INPUT
+870 STORE A
+880 PRINT "Please enter the height."
+890 INPUT
+900 MULTIPLY A
+910 DIVIDE 2
+920 JUMP out
+930cub VDU
+940 LINE
+950 LINE
+960 PRINT "Please enter the side length."
+970 INPUT
+980 LINE
+990 STORE a
+1000 MULTIPLY a
+1010 JUMP out
+1020rec VDU
+1030 LINE
+1040 LINE
+1050 PRINT "Please enter the length. "
+1060 INPUT
+1070 STORE a
+1080 PRINT "Please enter the width. "
+1090 INPUT
+1100 MULTIPLY a
+1110out LINE
+1120 PRINT "The area is aprox. "
+1130 OUTPUT
+1140 PRINT " square units."
+1150 LINE
+1160 LINE
+1170 PRINT "Do you have any more areas"
+1180 LINE
+1190 PRINT "to calculate ? "
+1200sloop GETCHR
+1210 AND 95\"convert lower case to upper."
+1220 COMPARE 89\"check for Y"
+1230 JIZ fchoice
+1240 COMPARE 78
+1250 JIZ menu
+1260 JUMP sloop
+1270schoice VDU
+1280 LINE
+1290 LINE
+1300 PRINT "Do you want:"
+1310 LINE
+1320 LINE
+1330 PRINT "    1. Cube."
+1340 LINE
+1350 LINE
+1360 PRINT "    2. Cuboid."
+1370 LINE
+1380 LINE
+1390 PRINT "    3. Prism."
+1400 LINE
+1410 LINE
+1420 PRINT "    4. Tetrahedron."
+1430 LINE
+1440 LINE
+1450 PRINT "Your choice please ? "
+1460secf GETCHR
+1470 COMPARE 49
+1480 JIZ cubv
+1490 COMPARE 50
+1500 JIZ cubov
+1510 COMPARE 51
+1520 JIZ prism
+1530 COMPARE 52
+1540 JIZ tetr
+1550 JUMP secf
+1560cubv VDU
+1570 LINE
+1580 LINE
+1590 PRINT "Please enter the side length."
+1600 INPUT
+1610 STORE A
+1620 MULTIPLY A
+1630 MULTIPLY A
+1640 JUMP outv
+1650cubov VDU
+1660 PRINT "Please enter the length"
+1670 INPUT
+1680 STORE A
+1690 PRINT "Please enter the width"
+1700 INPUT
+1710 STORE B
+1720 PRINT "Please enter the height"
+1730 INPUT
+1740 MULTIPLY A
+1750 MULTIPLY B
+1760 JUMP outv
+1770outv LINE
+1780 LINE
+1790 PRINT "The volume is aprox. "
+1800 OUTPUT
+1810 HALT
